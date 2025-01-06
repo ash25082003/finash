@@ -1,0 +1,24 @@
+{
+  "name": "finash",
+  "version": "1.0.0",
+  "description": "Finask is a platform for retail investors to analyze and discuss companies. It provides peer-reviewed company pages, discussion features, and tools to evaluate financial data, aiming to make markets more efficient.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/nodemon": "^1.19.6",
+    "nodemon": "^3.1.9"
+  }
+}

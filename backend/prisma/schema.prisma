@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Company {
+  id             String   @id @default(uuid())
+  symbol         String   @unique
+  name           String
+  description    String?
+  sector         String?
+  industry       String?
+  
+  // Financial Data
+  marketCap      Float?
+  peRatio        Float?
+  priceToBook    Float?
+  dividendYield  Float?
+  
+  // Balance Sheet Summary
+  totalAssets    Float?
+  totalLiabilities Float?
+  totalEquity    Float?
+  
+  // Additional Metadata
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([symbol])
+}
